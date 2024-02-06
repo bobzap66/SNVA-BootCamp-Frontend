@@ -35,3 +35,25 @@ button{
     border-radius: 15px;
     background-color:rgb(167, 243, 167);
 }
+
+
+@media screen and (min-width: 700px) {
+    .flex-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: auto;
+        font-size:x-large;
+    }
+    }
+    
+    @media screen and (max-width: 699px) {
+        .flex-container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding: 10px;
+            margin: auto;
+        }
+        }
