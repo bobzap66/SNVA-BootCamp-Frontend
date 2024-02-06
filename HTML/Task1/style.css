@@ -1,0 +1,152 @@
+*{
+    background-color:azure;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0;
+}
+.flex-container{
+    display: flex;
+    color:midnightblue;
+    padding:20px;
+    flex-flow: row wrap;
+    margin: auto;
+}
+.flex-container > h1{
+    color:brown;
+    margin: auto;
+    width: 70%;
+    text-align: center;
+}
+
+.product {
+    margin-right: 10px;
+    margin-top: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    width: auto;
+}
+
+.product img {
+    display: block;
+    margin-right: auto;
+    margin-top: auto;
+    padding:auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+    
+}
+.zoom {
+    transition: transform .2s; /* Animation */
+   
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); 
+  }
+.product_description {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 30px;
+}
+.product_description h2 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size:20px;
+    padding: 10px;
+
+}
+.product_description p {
+    font-size:20px;
+    padding: 40px;
+}
+/* .main_container{
+    display: grid;
+    margin: 20px;
+    grid-template-columns: 30% 30%;
+    gap: 30px;
+} */
+.navbar {
+    font-size:30px;
+    text-align: center;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: lightblue;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    background-color: lightblue;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+  
+  /* .footer {
+    position: sticky;
+  } */
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* background-color: black; */
+    /* color:white; */
+    padding: 0.5em;
+    margin: 0;
+    margin-top: auto;
+      }

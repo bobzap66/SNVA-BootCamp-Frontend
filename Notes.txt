@@ -1,0 +1,9 @@
+bala.sudhakar@snva.com
+
+•	Bala takes care of accounts at the Bakery shop.
+•	The shop sells the following Pastries:
+–	Black Current - $.5
+–	White Forest - $. 3
+–	Chocolate - $. 4
+–	Red Velvet - $. 4.5
+–	Each customer will buy at least one each, take the number of pastries as input calculate the amount for each pastry, find the total, print item wise bill
