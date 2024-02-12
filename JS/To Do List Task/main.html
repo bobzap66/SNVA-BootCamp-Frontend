@@ -9,7 +9,18 @@
             <input type="text" id="newTask" placeholder="What do you have to do?" >
             <span id= "addBtn" onclick="newElement()" class="addBtn">Add</span>
         </div>
-        <ul id="taskList">
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('checked')"> Completed</button>
+            <button class="btn" onclick="filterSelection('unchecked')"> To Do</button>
+          </div>
+        <ul id="taskList" class="tasks">
+            <!-- <li class="task">Hit the gym</li>
+            <li class="checked task">Pay bills</li>
+            <li class="task">Meet George</li>
+            <li class="task">Buy eggs</li>
+            <li class="task">Read a book</li>
+            <li class="task">Organize office</li> -->
         </ul>
         <script src="./functions.js"></script>
     </body>

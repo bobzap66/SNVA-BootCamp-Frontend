@@ -34,7 +34,7 @@ ul {
     padding: 0;
 }
 
-ul li {
+ul li{
     position: relative;
     padding: 10px;
     background: lightgreen;
@@ -43,6 +43,7 @@ ul li {
     border-radius: 10px;
     margin-top: 10px;
 }
+
 
 ul li:nth-child(odd) {
     background-color: olivedrab;
@@ -53,6 +54,12 @@ ul li.checked {
     text-decoration: line-through;
 
 }
+ul li {
+    display: none;
+}
+ul li.show {
+    display: block;
+  }
 
 
 .close {
@@ -73,6 +80,23 @@ ul li.checked {
     color: white;
     text-align: center;
     border-radius: 15px;
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px;
+    width: 20%;
+    background: lightgreen;
+    color: darkolivegreen;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: #bbb;
 }
 
   input {

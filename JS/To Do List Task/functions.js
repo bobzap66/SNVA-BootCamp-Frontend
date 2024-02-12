@@ -8,9 +8,6 @@ for( i = 0; i < taskList.length; i++) {
     taskList[i].appendChild(span);
 }
 
-
-
-
 var close = document.getElementsByClassName("close");
 var i; 
 for(i = 0; i < close.length; i++){
@@ -24,11 +21,61 @@ var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
+
   }
 }, false);
 
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("task");
+  // if(c == "all") c="";
+  if(c == 'checked'){
+   for(i = 0; i < x.length; i++) {
+    removeClass(x[i], "show");
+    if(x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+   }
+  }
+  if(c == "unchecked") {
+    for(i = 0; i < x.length; i++) {
+      removeClass(x[i], "show");
+      if(!x[i].classList.contains('checked')) addClass(x[i], "show");
+    }
+  }
+  if(c == "all") {
+    for(i = 0; i < x.length; i++) {
+      addClass(x[i], "show");
+    }
+}
+}
+
+function addClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+function removeClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
 function newElement() {
     var li = document.createElement("li");
+    li.classList.add("task");
     var inputValue = document.getElementById("newTask").value;
     console.log("inputValue = " + inputValue)
     var t = document.createTextNode(inputValue);
@@ -52,6 +99,7 @@ function newElement() {
             div.style.display = "none";
         }
     }
+    filterSelection('all');
 }
 
 var input = document.getElementById("newTask");
